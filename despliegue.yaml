@@ -14,10 +14,17 @@ spec:
     spec:
       containers:
       - name: contenedor-nginx
-        image: mi-web-stratio:v1
-        imagePullPolicy: Never 
+        image: sebsa27/prueba_tecnica_sebastian_saenz:v1
+        imagePullPolicy: IfNotPresent 
         ports:
         - containerPort: 80
+        resources: 
+          requests:
+            memory: "64Mi"
+            cpu: "100m"
+          limits:
+            memory: "128Mi"
+            cpu: "200m"
 
 ---
 
