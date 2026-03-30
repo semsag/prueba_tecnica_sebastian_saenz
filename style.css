@@ -1,14 +1,7 @@
-:root {
-    --bg-color: #0d1117;
-    --card-bg: #161b22;
-    --primary-red: #ff3e3e;
-    --text-white: #f0f6fc;
-    --accent-blue: #58a6ff;
-}
 
 body {
-    background-color: var(--bg-color);
-    color: var(--text-white);
+    background-color: #0d1117;
+    color: #f0f6fc;
     font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
     display: flex;
     justify-content: center;
@@ -24,7 +17,7 @@ body {
 }
 
 header h1 {
-    color: var(--primary-red);
+    color: rgb(159, 11, 11);
     font-size: 2.5rem;
     margin-bottom: 0.5rem;
 }
@@ -39,14 +32,14 @@ main {
 }
 
 .card {
-    background-color: var(--card-bg);
+    background-color: #161b22;
     border: 1px solid #30363d;
     border-radius: 12px;
     padding: 25px;
     transition: transform 0.3s ease;
 }
 
-.card:hover { transform: translateY(-5px); border-color: var(--primary-red); }
+.card:hover { transform: translateY(-5px); border-color: #ff3e3e; }
 
 .status-indicator {
     display: flex;
@@ -66,7 +59,7 @@ main {
 }
 
 button {
-    background-color: var(--primary-red);
+    background-color: #ff3e3e;
     color: white;
     border: none;
     padding: 12px 24px;
@@ -80,7 +73,7 @@ button:hover { opacity: 0.8; }
 
 ul { text-align: left; list-style: none; padding: 0; }
 li { margin: 10px 0; font-size: 0.95rem; }
-li strong { color: var(--accent-blue); }
+li strong { color: #58a6ff; }
 
 footer {
     border-top: 1px solid #30363d;
@@ -88,4 +81,4 @@ footer {
     color: #8b949e;
 }
 
-#clock { font-size: 1.5rem; font-weight: bold; color: var(--text-white); margin-bottom: 10px; }
+#clock { font-size: 1.5rem; font-weight: bold; color: #f0f6fc; margin-bottom: 10px; }

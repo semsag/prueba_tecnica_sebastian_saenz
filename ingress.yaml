@@ -7,13 +7,12 @@ metadata:
 spec:
   ingressClassName: nginx
   rules:
-  - host: stratio.test # Este será nuestro "dominio" falso
-    http:
+  - host: stratio.test 
       paths:
       - path: /
         pathType: Prefix
         backend:
           service:
-            name: stratio-service # Debe coincidir con el nombre de tu Service
+            name: stratio-service 
             port:
               number: 80

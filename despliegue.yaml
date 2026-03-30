@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: stratio-web-deploy
 spec:
-  replicas: 2 # Vamos a poner 2 copias para que se vea más profesional
+  replicas: 2 
   selector:
     matchLabels:
       app: mi-web
@@ -15,20 +15,20 @@ spec:
       containers:
       - name: contenedor-nginx
         image: mi-web-stratio:v1
-        imagePullPolicy: Never # OBLIGATORIO para usar la imagen local
+        imagePullPolicy: Never 
         ports:
         - containerPort: 80
----
+
 apiVersion: v1
 kind: Service
 metadata:
   name: stratio-service
 spec:
-  type: NodePort # El método que te pidieron
+  type: NodePort 
   selector:
     app: mi-web
   ports:
     - protocol: TCP
       port: 80
       targetPort: 80
-      nodePort: 30080 # Puerto que usaremos para entrar desde Windows
+      nodePort: 30080 
